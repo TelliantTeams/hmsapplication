@@ -1,8 +1,8 @@
 package com.hmsapplication.repository;
 
-import com.hmsapplication.entity.UsersModel;
+import com.hmsapplication.entity.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UsersRepository extends JpaRepository<UsersModel, Integer> {
+public interface UsersRepository extends JpaRepository<Users, Integer> {
 
 }

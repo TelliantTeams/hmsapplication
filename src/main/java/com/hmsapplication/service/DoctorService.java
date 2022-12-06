@@ -1,6 +1,6 @@
 package com.hmsapplication.service;
 
-import com.hmsapplication.entity.DoctorModel;
+import com.hmsapplication.entity.Doctor;
 import com.hmsapplication.repository.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,12 +12,12 @@ public class DoctorService {
     @Autowired
     DoctorRepository doctorRepository;
 
-    public List<DoctorModel> getDoctorModel() {
+    public List<Doctor> getDoctor() {
         return doctorRepository.findAll();
     }
 
-    public DoctorModel createDoctor(DoctorModel doctorModel) {
-        return doctorRepository.save(doctorModel);
+    public Doctor createDoctor(Doctor doctor) {
+        return doctorRepository.save(doctor);
     }
 
 

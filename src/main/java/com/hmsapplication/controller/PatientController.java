@@ -1,5 +1,5 @@
 package com.hmsapplication.controller;
-import com.hmsapplication.entity.PatientModel;
+import com.hmsapplication.entity.Patient;
 import com.hmsapplication.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,13 +14,13 @@ public class PatientController {
     private PatientService patientService;
 
     @GetMapping("/all")
-    public List<PatientModel> findAllPatientModel(){
-        return patientService.getPatientModel();
+    public List<Patient> findAllPatient(){
+        return patientService.getPatient();
     }
 
     @PostMapping("/new")
-    public PatientModel addPatient(@RequestBody PatientModel patientModel){
-        return patientService.createPatient(patientModel);
+    public Patient addPatient(@RequestBody Patient patient){
+        return patientService.createPatient(patient);
     }
 
 

@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "users")
 @NoArgsConstructor
-public class UsersModel implements Serializable {
+public class Users implements Serializable {
     @Id
     @GeneratedValue
     private int id;
@@ -25,11 +25,11 @@ public class UsersModel implements Serializable {
     @Column
     private boolean active;
 
-    public UsersModel(int id) {
+    public Users(int id) {
         this.id = id;
     }
 
-    public UsersModel(int id, String username, String password, String displayname, String type, boolean active) {
+    public Users(int id, String username, String password, String displayname, String type, boolean active) {
         this.id = id;
         this.username = username;
         this.password = password;

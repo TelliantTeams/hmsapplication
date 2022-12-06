@@ -1,6 +1,6 @@
 package com.hmsapplication.controller;
 
-import com.hmsapplication.entity.DoctorModel;
+import com.hmsapplication.entity.Doctor;
 import com.hmsapplication.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,13 +16,13 @@ public class DoctorController {
 
 
     @GetMapping("/all")
-    public List<DoctorModel> findAllDoctorModel(){
-        return doctorService.getDoctorModel();
+    public List<Doctor> findAllDoctor(){
+        return doctorService.getDoctor();
     }
 
     @PostMapping("/new")
-    public DoctorModel addDoctor(@RequestBody DoctorModel doctorModel){
-        return doctorService.createDoctor(doctorModel);
+    public Doctor addDoctor(@RequestBody Doctor doctor){
+        return doctorService.createDoctor(doctor);
     }
 
 }

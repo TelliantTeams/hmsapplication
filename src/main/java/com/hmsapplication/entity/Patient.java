@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "patient")
 @NoArgsConstructor
-public class PatientModel implements Serializable {
+public class Patient implements Serializable {
     @Id
     @GeneratedValue
     private int pid;
@@ -42,8 +42,8 @@ public class PatientModel implements Serializable {
     @Column
     private Float pbp;
 
-    public PatientModel(int pid, String pname, int page, String pgender,
-                        String paddress, Long pcontact, String pdob, Float pheight, Float pweight, Float pbp) {
+    public Patient(int pid, String pname, int page, String pgender,
+                   String paddress, Long pcontact, String pdob, Float pheight, Float pweight, Float pbp) {
         this.pid = pid;
         this.pname = pname;
         this.page = page;

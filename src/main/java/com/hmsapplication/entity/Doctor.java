@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "doctor")
 @NoArgsConstructor
-public class DoctorModel implements Serializable {
+public class Doctor implements Serializable {
     @Id
     @GeneratedValue
     private int did;
@@ -36,8 +36,8 @@ public class DoctorModel implements Serializable {
     @Column
     private String signature;
 
-    public DoctorModel(int did, String dname, int age, Long contact, String address,
-                       String mail, String qualification, String signature) {
+    public Doctor(int did, String dname, int age, Long contact, String address,
+                  String mail, String qualification, String signature) {
         this.did = did;
         this.dname = dname;
         this.age = age;
