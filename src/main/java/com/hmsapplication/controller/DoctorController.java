@@ -25,8 +25,4 @@ public class DoctorController {
         return doctorService.createDoctor(doctorModel);
     }
 
-    @PutMapping("/update")
-    public DoctorModel updateDoctor(@RequestBody DoctorModel doctorModel) {
-        return doctorService.updateDoctor(doctorModel);
-    }
 }

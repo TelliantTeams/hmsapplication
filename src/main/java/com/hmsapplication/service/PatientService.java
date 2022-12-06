@@ -22,12 +22,5 @@ public class PatientService {
     }
 
 
-    public PatientModel updatePatient(PatientModel patientModel) {
-        PatientModel olddata = patientRepository.findByPuserid(patientModel.getPuserid());
-        olddata.setPaddress(patientModel.getPaddress());
-        olddata.setPcontact(patientModel.getPcontact());
-        olddata.setPweight(patientModel.getPweight());
-        olddata.setPheight(patientModel.getPheight());
-        return patientRepository.save(olddata);
-    }
+
 }

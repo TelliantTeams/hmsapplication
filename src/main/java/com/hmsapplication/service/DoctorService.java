@@ -20,12 +20,5 @@ public class DoctorService {
         return doctorRepository.save(doctorModel);
     }
 
-    public DoctorModel updateDoctor(DoctorModel doctorModel) {
-        DoctorModel dolddata = doctorRepository.findByDuserid(doctorModel.getDuserid());
-        dolddata.setDaddress(doctorModel.getDaddress());
-        dolddata.setDcontact(doctorModel.getDcontact());
-        dolddata.setDmail(doctorModel.getDmail());
-        dolddata.setDqualification(doctorModel.getDqualification());
-        return doctorRepository.save(dolddata);
-    }
+
 }

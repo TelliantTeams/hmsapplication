@@ -25,37 +25,12 @@ public class UsersController {
         return usersService.getUsersModel();
     }
 
-
-    @PostMapping("/new")
-    public UsersModel createuser(@RequestParam("username") String username, @RequestParam("password") String password) {
-        UsersModel newuser = new UsersModel();
-        newuser.setUid(generateRandomChars(
-                "ABCDEFGH123456789", 5));
-        newuser.setUsername(username);
-        newuser.setPassword((password));
-        newuser.setDisplayname("temp");
-        newuser.setType("temp");
-        newuser.setActive(true);
-
-
-        return usersRepository.save(newuser);
+    @PostMapping(path = "/create")
+    public UsersModel createuser(@RequestBody UsersModel usersModel){
+        return usersService.createUser(usersModel);
     }
 
 
-    @PutMapping("/update")
-    public UsersModel updateuser(@RequestBody UsersModel usersModel) {
-        return usersService.updateuser(usersModel);
-    }
 
-    public static String generateRandomChars(String candidateChars, int length) {
-        StringBuilder sb = new StringBuilder();
-        Random random = new Random();
-        for (int i = 0; i < length; i++) {
-            sb.append(candidateChars.charAt(random.nextInt(candidateChars
-                    .length())));
-        }
-
-        return sb.toString();
-    }
 }
 

@@ -19,12 +19,7 @@ public class UsersService {
     }
 
 
-    public UsersModel updateuser(UsersModel usersModel) {
-        UsersModel uolddata = usersRepository.findByUid(usersModel.getUid());
-        uolddata.setUsername(usersModel.getUsername());
-        uolddata.setPassword(usersModel.getPassword());
-        uolddata.setDisplayname(usersModel.getDisplayname());
-        uolddata.setType(usersModel.getType());
-        return usersRepository.save(uolddata);
+    public UsersModel createUser(UsersModel usersModel) {
+        return usersRepository.save(usersModel);
     }
 }

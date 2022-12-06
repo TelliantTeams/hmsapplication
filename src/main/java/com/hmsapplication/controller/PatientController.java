@@ -23,10 +23,6 @@ public class PatientController {
         return patientService.createPatient(patientModel);
     }
 
-    @PutMapping("/update")
-    public PatientModel updatePatient(@RequestBody PatientModel patientModel) {
-        return patientService.updatePatient(patientModel);
-    }
 
 
 
