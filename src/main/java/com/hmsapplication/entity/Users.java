@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Data
 @Entity
@@ -84,5 +85,18 @@ public class Users implements Serializable {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Users)) return false;
+        Users users = (Users) o;
+        return id == users.id && active == users.active && Objects.equals(username, users.username) && Objects.equals(password, users.password) && Objects.equals(displayname, users.displayname) && Objects.equals(type, users.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
