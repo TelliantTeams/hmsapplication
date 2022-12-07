@@ -13,7 +13,7 @@ import java.io.Serializable;
 public class Patient implements Serializable {
     @Id
     @GeneratedValue
-    private int pid;
+    private int id;
 
     @Column
     private String pname;
@@ -42,26 +42,17 @@ public class Patient implements Serializable {
     @Column
     private Float pbp;
 
-    public Patient(int pid, String pname, int page, String pgender,
-                   String paddress, Long pcontact, String pdob, Float pheight, Float pweight, Float pbp) {
-        this.pid = pid;
-        this.pname = pname;
-        this.page = page;
-        this.pgender = pgender;
-        this.paddress = paddress;
-        this.pcontact = pcontact;
-        this.pdob = pdob;
-        this.pheight = pheight;
-        this.pweight = pweight;
-        this.pbp = pbp;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    private Users user;
+
+
+    public int getId() {
+        return id;
     }
 
-    public int getPid() {
-        return pid;
-    }
-
-    public void setPid(int pid) {
-        this.pid = pid;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPname() {
@@ -134,5 +125,27 @@ public class Patient implements Serializable {
 
     public void setPbp(Float pbp) {
         this.pbp = pbp;
+    }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
+
+    public Patient(int id, String pname, int page, String pgender, String paddress, Long pcontact, String pdob, Float pheight, Float pweight, Float pbp, Users user) {
+        this.id = id;
+        this.pname = pname;
+        this.page = page;
+        this.pgender = pgender;
+        this.paddress = paddress;
+        this.pcontact = pcontact;
+        this.pdob = pdob;
+        this.pheight = pheight;
+        this.pweight = pweight;
+        this.pbp = pbp;
+        this.user = user;
     }
 }
