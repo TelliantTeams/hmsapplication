@@ -135,7 +135,8 @@ public class Patient implements Serializable {
         this.user = user;
     }
 
-    public Patient(int id, String pname, int page, String pgender, String paddress, Long pcontact, String pdob, Float pheight, Float pweight, Float pbp, Users user) {
+    public Patient(int id, String pname, int page, String pgender, String paddress, Long pcontact,
+                   String pdob, Float pheight, Float pweight, Float pbp, Users user) {
         this.id = id;
         this.pname = pname;
         this.page = page;

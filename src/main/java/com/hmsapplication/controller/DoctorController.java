@@ -25,4 +25,9 @@ public class DoctorController {
         return doctorService.createDoctor(doctor);
     }
 
+    @GetMapping("/count")
+    public int findDoctorCount() {
+        return doctorService.getDoctorCount();
+    }
+
 }

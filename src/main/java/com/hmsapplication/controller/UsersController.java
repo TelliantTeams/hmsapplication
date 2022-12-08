@@ -27,7 +27,7 @@ public class UsersController {
     private PatientService patientService;
 
     @Autowired
-    private PatientRepository patientaepo;
+    private PatientRepository patientRepository;
 
     @Autowired
     private UsersRepository usersRepository;

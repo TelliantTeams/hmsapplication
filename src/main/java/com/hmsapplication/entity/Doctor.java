@@ -11,49 +11,42 @@ import java.io.Serializable;
 @Table(name = "doctor")
 @NoArgsConstructor
 public class Doctor implements Serializable {
-    @Id
-    @GeneratedValue
-    private int did;
 
-    @Column
-    private String dname;
+     @Id
+     @GeneratedValue
+     private int id;
 
-    @Column
-    private int age;
+     @Column
+     private String dname;
 
-    @Column
-    private Long contact;
+     @Column
+     private int age;
 
-    @Column
-    private String address;
+     @Column
+     private Long contact;
 
-    @Column
-    private String mail;
+     @Column
+     private String address;
 
-    @Column
-    private String qualification;
+     @Column
+     private String mail;
 
-    @Column
-    private String signature;
+     @Column
+     private String qualification;
 
-    public Doctor(int did, String dname, int age, Long contact, String address,
-                  String mail, String qualification, String signature) {
-        this.did = did;
-        this.dname = dname;
-        this.age = age;
-        this.contact = contact;
-        this.address = address;
-        this.mail = mail;
-        this.qualification = qualification;
-        this.signature = signature;
+     @Column
+     private String signature;
+
+     @OneToOne(cascade = CascadeType.ALL)
+     @JoinColumn(name = "user_id",referencedColumnName = "id")
+     private Users users;
+
+    public int getId() {
+        return id;
     }
 
-    public int getDid() {
-        return did;
-    }
-
-    public void setDid(int did) {
-        this.did = did;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDname() {
@@ -111,5 +104,25 @@ public class Doctor implements Serializable {
     public void setSignature(String signature) {
         this.signature = signature;
     }
-}
 
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
+    }
+
+    public Doctor(int id, String dname, int age, Long contact, String address, String mail,
+                  String qualification, String signature, Users users) {
+        this.id = id;
+        this.dname = dname;
+        this.age = age;
+        this.contact = contact;
+        this.address = address;
+        this.mail = mail;
+        this.qualification = qualification;
+        this.signature = signature;
+        this.users = users;
+    }
+}

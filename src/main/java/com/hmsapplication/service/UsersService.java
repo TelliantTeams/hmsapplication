@@ -1,6 +1,5 @@
 package com.hmsapplication.service;
 
-import com.hmsapplication.entity.Patient;
 import com.hmsapplication.entity.Users;
 import com.hmsapplication.repository.PatientRepository;
 import com.hmsapplication.repository.UsersRepository;

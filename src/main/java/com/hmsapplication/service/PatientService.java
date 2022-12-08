@@ -26,4 +26,8 @@ public class PatientService {
         return patientRepository.save(users);
     }
 
+    public int getPatientCount(){
+        return patientRepository.findAll().size();
+    }
+
 }
