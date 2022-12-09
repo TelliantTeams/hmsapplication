@@ -23,8 +23,10 @@ public class PatientController {
         return patientService.createPatient(patient);
     }
 
-
-
+    @GetMapping("/count")
+    public int findPatientCount(){
+        return patientService.getPatientCount();
+    }
 
 
 }
