@@ -1,6 +1,7 @@
 package com.hmsapplication.controller;
 
 import com.hmsapplication.entity.Doctor;
+import com.hmsapplication.repository.DoctorRepository;
 import com.hmsapplication.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,9 @@ public class DoctorController {
     @Autowired
     private DoctorService doctorService;
 
+    @Autowired
+    private DoctorRepository doctorRepository;
+
 
     @GetMapping("/all")
     public List<Doctor> findAllDoctor(){
@@ -26,8 +30,10 @@ public class DoctorController {
     }
 
     @GetMapping("/count")
-    public int findDoctorCount() {
+    public long findDoctorCount() {
         return doctorService.getDoctorCount();
     }
+
+
 
 }

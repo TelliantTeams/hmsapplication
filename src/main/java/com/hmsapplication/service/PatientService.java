@@ -26,4 +26,8 @@ public class PatientService {
         return patientRepository.save(users);
     }
 
+    public long getPatientCount(){
+        return patientRepository.findAll().stream().count();
+    }
+
 }

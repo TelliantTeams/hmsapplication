@@ -24,7 +24,7 @@ public class PatientController {
     }
 
     @GetMapping("/count")
-    public int findPatientCount(){
+    public long findPatientCount(){
         return patientService.getPatientCount();
     }
 

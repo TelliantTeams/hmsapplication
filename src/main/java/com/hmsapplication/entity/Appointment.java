@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @Entity
@@ -16,7 +18,7 @@ public class Appointment {
     private int id;
 
     @Column
-    private String visiting_date;
+    private LocalDate visiting_date;
 
     @Column
     private String reason;

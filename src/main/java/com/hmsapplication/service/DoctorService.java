@@ -20,9 +20,13 @@ public class DoctorService {
         return doctorRepository.save(doctor);
     }
 
-    public int getDoctorCount() {
-        return doctorRepository.findAll().size();
+    public long getDoctorCount() {
+        return doctorRepository.findAll().stream().count();
     }
+
+
+
+
 
 
 }

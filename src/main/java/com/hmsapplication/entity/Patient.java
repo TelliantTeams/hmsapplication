@@ -42,6 +42,8 @@ public class Patient implements Serializable {
     @Column
     private Float pbp;
 
+
+
 //    @OneToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "user_id",referencedColumnName = "id")
     @Column(name = "user_id")
