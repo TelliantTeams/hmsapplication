@@ -24,24 +24,21 @@ public class UsersService {
     }
 
 
-    public int loginUser(LoginDetails details){
+    public Users loginUser(LoginDetails details){
 
-        int successLogin=-1;
-        Users user=this.usersRepository.findByUser(details.getUsername());
+        Users user=null;
+        user=this.usersRepository.findByUser(details.getUsername());
         if(user!=null) {
             if (user.getPassword().equals(details.getPassword())) {
-                 successLogin = 1;
+                return user;
             }
         }
-         return successLogin;
+         return user;
     }
-
-    public int saveUser(Users user){
-
+    public Users saveUser(Users user){
         this.usersRepository.save(user);
         this.usersRepository.flush();
-        System.out.println(user.getId());
-        return user.getId();
+        return user;
     }
 
 }

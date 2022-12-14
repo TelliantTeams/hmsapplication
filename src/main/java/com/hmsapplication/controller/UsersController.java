@@ -39,7 +39,7 @@ public class UsersController {
     }
 
     @PostMapping(path = "/register")
-    public ResponseEntity<Patient> createuser(@RequestBody Register registerUser){
+    public ResponseEntity<Users> createuser(@RequestBody Register registerUser){
         System.out.println("User request received "+registerUser);
 
         Users usr=new Users();
@@ -47,25 +47,26 @@ public class UsersController {
         usr.setUsername(registerUser.getUsername());
         usr.setPassword(registerUser.getPassword());
         usr.setActive(true);
+        usr.setType("1");
         usr.setDisplayname(registerUser.getUsername().toUpperCase());
 
-        int userId=usersService.saveUser(usr);
+        Users user=usersService.saveUser(usr);
         Patient patient=new Patient();
 
         patient.setPname(registerUser.getUsername());
         patient.setPdob(registerUser.getDob());
         patient.setPcontact(registerUser.getContact());
-        patient.setUser_id(userId);
+        patient.setUser_id(user.getId());
 
         Patient response= patientService.registerUser(patient);
-        return new ResponseEntity<Patient>(response,HttpStatus.OK);
+        return new ResponseEntity<Users>(user,HttpStatus.OK);
     }
 
     @PostMapping(path = "/login")
-    public int createuser(@RequestBody LoginDetails loginDetails){
+    public ResponseEntity<Users> createuser(@RequestBody LoginDetails loginDetails){
 
-           int loginStatus= this.usersService.loginUser(loginDetails);
-          return loginStatus;
+        Users loginStatus= this.usersService.loginUser(loginDetails);
+          return new ResponseEntity<>(loginStatus,HttpStatus.OK);
 
     }
 
