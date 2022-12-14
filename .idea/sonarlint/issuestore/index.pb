@@ -1,12 +1,8 @@
 
-p
-@src/main/java/com/hmsapplication/controller/UsersController.java,1\a\1a73b5827f2ed7d838b5c9984531fd1f53d6a74a
 e
 5src/main/java/com/hmsapplication/entity/Register.java,7\7\77894fd4ca326b3c8538dc57909f2963b522dab7
 r
 Bsrc/main/java/com/hmsapplication/repository/PatientRepository.java,e\a\ea66c6bd47330af5ee6dd9e17b7edb532f660a14
-c
-3src/main/java/com/hmsapplication/entity/Doctor.java,b\2\b2792b0cfe2a88faf63bc02077731b4a3928db40
 i
 9src/main/java/com/hmsapplication/entity/LoginDetails.java,5\7\5788915857cc76d1c8ded9733cee6a5f476425d6
 v
