@@ -5,11 +5,11 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 
 @Data
 @Entity
 @Table(name = "patient")
-@NoArgsConstructor
 public class Patient implements Serializable {
     @Id
     @GeneratedValue
@@ -31,7 +31,7 @@ public class Patient implements Serializable {
     private Long pcontact;
 
     @Column
-    private String pdob;
+    private LocalDate pdob;
 
     @Column
     private Float pheight;
@@ -48,6 +48,10 @@ public class Patient implements Serializable {
 //    @JoinColumn(name = "user_id",referencedColumnName = "id")
     @Column(name = "user_id")
     private int user_id;
+
+    public Patient() {
+
+    }
 
 
     public int getId() {
@@ -98,11 +102,11 @@ public class Patient implements Serializable {
         this.pcontact = pcontact;
     }
 
-    public String getPdob() {
+    public LocalDate getPdob() {
         return pdob;
     }
 
-    public void setPdob(String pdob) {
+    public void setPdob(LocalDate pdob) {
         this.pdob = pdob;
     }
 
@@ -139,7 +143,7 @@ public class Patient implements Serializable {
         this.user_id = user_id;
     }
 
-    public Patient(int id, String pname, int page, String pgender, String paddress, Long pcontact, String pdob, Float pheight, Float pweight, Float pbp, int user_id) {
+    public Patient(int id, String pname, int page, String pgender, String paddress, Long pcontact, LocalDate pdob, Float pheight, Float pweight, Float pbp, int user_id) {
         this.id = id;
         this.pname = pname;
         this.page = page;

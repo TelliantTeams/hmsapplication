@@ -1,45 +1,33 @@
 package com.hmsapplication.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import java.io.Serializable;
-
-@Data
 @Entity
-@Table(name = "doctor")
-@NoArgsConstructor
-public class Doctor implements Serializable {
+public class Registerdoc {
 
-     @Id
-     @GeneratedValue
-     private int id;
+    @Id
+    private int id;
 
-     @Column
-     private String dname;
+    private String username;
 
-     @Column
-     private int age;
+    private String password;
 
-     @Column
-     private Long contact;
+    private String dname;
 
-     @Column
-     private String address;
+    private int age;
 
-     @Column
-     private String mail;
+    private Long contact;
 
-     @Column
-     private String qualification;
+    private String address;
 
-     @Column
-     private String signature;
+    private String mail;
 
-     @Column(name = "user_id")
-     private int user_id;
+    private String qualification;
+
+    private String signature;
 
     public int getId() {
         return id;
@@ -47,6 +35,22 @@ public class Doctor implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getDname() {
@@ -105,17 +109,11 @@ public class Doctor implements Serializable {
         this.signature = signature;
     }
 
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
-
-    public Doctor(int id, String dname, int age, Long contact, String address, String mail,
-                  String qualification, String signature, int user_id) {
+    public Registerdoc(int id,String username, String password, String dname, int age,
+                       Long contact, String address, String mail, String qualification, String signature) {
         this.id = id;
+        this.username = username;
+        this.password = password;
         this.dname = dname;
         this.age = age;
         this.contact = contact;
@@ -123,6 +121,5 @@ public class Doctor implements Serializable {
         this.mail = mail;
         this.qualification = qualification;
         this.signature = signature;
-        this.user_id = user_id;
     }
 }

@@ -1,6 +1,7 @@
 package com.hmsapplication.service;
 
 import com.hmsapplication.entity.Appointment;
+import com.hmsapplication.entity.ViewApp;
 import com.hmsapplication.repository.AppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,17 +24,17 @@ public class AppointmentService {
         return appointmentRepository.save(appointment);
     }
 
-    public List<Appointment> getTodayAppointment() {
+    public List<ViewApp> getTodayAppointment() {
          System.out.println(LocalDate.now());
-         var app= appointmentRepository.findAll();
-         var todayapp= app.stream().filter(a->a.getVisiting_date().equals(LocalDate.now())).collect(Collectors.toList());
+         var app= appointmentRepository.getAppointments();
+         var todayapp= app.stream().filter(a->a.getVisiting_date().equals(LocalDate.now()))
+                 .filter(a->a.getStatus().equalsIgnoreCase("approved")).collect(Collectors.toList());
          return todayapp;
-
     }
 
-    public List<Appointment> getPendingAppointment() {
+    public List<ViewApp> getPendingAppointment() {
         System.out.println(LocalDate.now());
-        var app= appointmentRepository.findAll();
+        var app= appointmentRepository.getAppointments();
 
         var todayapp= app.stream().filter(a->a.getVisiting_date().isAfter(LocalDate.now()))
                 .filter(a->a.getStatus().equalsIgnoreCase("pending")).collect(Collectors.toList());
@@ -42,5 +43,10 @@ public class AppointmentService {
     }
 
 
-    
+    public List<ViewApp> getApprovedAppointment() {
+        var app = appointmentRepository.getAppointments();
+        var approvedapp = app.stream().filter(a->a.getVisiting_date().isAfter(LocalDate.now()))
+                .filter(a->a.getStatus().equalsIgnoreCase("approved")).collect(Collectors.toList());
+        return approvedapp;
+    }
 }
