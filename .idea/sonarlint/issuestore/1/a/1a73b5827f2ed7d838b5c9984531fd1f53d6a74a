@@ -1,0 +1,21 @@
+
+o
+java:S2293G"YReplace the type specification in this constructor call with the diamond operator ("<>").(ø²þñ
+o
+java:S2293b"YReplace the type specification in this constructor call with the diamond operator ("<>").(ø²þñ
+R
+java:S1854F"<Remove this useless assignment to local variable "response".(êÒå
+V
+java:S4684,"@Replace this persistent entity with a simple POJO or DTO object.(È…
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(¬Â‘ÿ
+C
+java:S1481F"-Remove this unused "response" local variable.(êÒå
+W
+java:S1854a"<Remove this useless assignment to local variable "response".(©Íöÿüÿÿÿÿ
+]
+java:S4684K"@Replace this persistent entity with a simple POJO or DTO object.(½æ¡¹8¨’â›Ó0
+S	java:S106L"9Replace this use of System.out or System.err by a logger.(ã‰Äèÿÿÿÿÿ
+H
+java:S1481a"-Remove this unused "response" local variable.(©Íöÿüÿÿÿÿ
+R
+java:S1128	"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8Ú«â›Ó0

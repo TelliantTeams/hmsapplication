@@ -1,0 +1,23 @@
+
+m	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íè÷Û8©¤ú­Ñ0
+r	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜþÇ„ûÿÿÿÿ8ª¤ú­Ñ0
+r	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜþÇ„ûÿÿÿÿ8ª¤ú­Ñ0
+r	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜþÇ„ûÿÿÿÿ8ª¤ú­Ñ0
+r	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÇ úøÿÿÿÿ8Ê—û­Ñ0
+r	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÇäÒúÿÿÿÿ8Ê—û­Ñ0
+l	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ñ‹8Ê—û­Ñ0
+r	java:S117m"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š·ÊÍúÿÿÿÿ8Ë—û­Ñ0
+m	java:S116"XRename this field "visiting_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«¢µŸ
+o	java:S116 "URename this field "patient_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¿†™þÿÿÿÿ
+r	java:S116#"]Rename this field "visiting_doctor_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆõ°Æ
+k	java:S116&"VRename this field "approved_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ø€Ž
+o	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ÃÇîüÿÿÿÿ8Ô—û­Ñ0
+o	java:S100E"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÇ úøÿÿÿÿ8Õ—û­Ñ0
+o	java:S100Y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÇ…Úøÿÿÿÿ8Ö—û­Ñ0
+o	java:S100]"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÇäÒúÿÿÿÿ8Ö—û­Ñ0
+o	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îáƒåýÿÿÿÿ8Ö—û­Ñ0
+i	java:S100e"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ñ‹8×—û­Ñ0
+j	java:S100i"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Æ‰ë8×—û­Ñ0
+o	java:S100m"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š·ÊÍúÿÿÿÿ8Ø—û­Ñ0
+X
+java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8€â÷­Ñ0

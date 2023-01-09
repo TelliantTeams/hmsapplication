@@ -39,7 +39,6 @@ public class AppointmentController {
      //   appointment.setVisiting_date(LocalDate.now());
         System.out.println(appointment);
         return appointmentService.createAppointment(appointment);
-
     }
 
     @GetMapping("/find/{id}")

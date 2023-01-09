@@ -1,0 +1,9 @@
+
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÅ®Šüÿÿÿÿ
+l	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆŠ¿´øÿÿÿÿ
+l	java:S1162"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÖïéÿÿÿÿÿ
+]	java:S107’"BConstructor has 11 parameters, which is greater than 7 authorized.(ÆŠ¿´øÿÿÿÿ
+d	java:S100Š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨şšş
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÅ®Šüÿÿÿÿ
+R
+java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8Ô¹ùüÒ0

@@ -1,0 +1,6 @@
+
+]	java:S107‚"BConstructor has 12 parameters, which is greater than 7 authorized.(ÒŽˆ—ÿÿÿÿÿ
+Q	java:S125M"<This block of commented-out lines of code should be removed.(«°È¯
+Q	java:S125z"<This block of commented-out lines of code should be removed.(¬å’º
+B
+java:S1068"'Remove this unused "age" private field.(Æ†´¦þÿÿÿÿ
